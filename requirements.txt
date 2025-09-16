@@ -1,0 +1,26 @@
+# Core App & AI
+streamlit
+transformers
+torch
+peft
+accelerate
+bitsandbytes # For 4-bit QLoRA
+google-generativeai # For Gemini Explainer/Synthesizer
+python-dotenv
+
+# Fine-tuning & Data
+datasets
+sacrebleu
+rouge_score
+
+# RAG, PDF & Utils
+langchain
+sentence-transformers
+faiss-cpu
+pymupdf # Replaces pypdf for better text extraction
+rapidfuzz # For question deduplication
+gtts # Google Text-to-Speech
+
+# UI Components
+streamlit-mic-recorder
+streamlit-pdf-viewer
