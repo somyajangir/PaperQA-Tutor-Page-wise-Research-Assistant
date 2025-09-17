@@ -143,12 +143,4 @@ streamlit run ui/app.py
 
 ---
 
-## 📜 Important Notes
-
-### 🔐 Security & Ethics
-- ⚠️ **Never commit API keys or HF tokens**
-- 📦 **Large model weights are not committed** (see Local summarizer weights section)
-- 🎓 **Academic Integrity:** Use as a study aid and cite sources appropriately
-
----
 
