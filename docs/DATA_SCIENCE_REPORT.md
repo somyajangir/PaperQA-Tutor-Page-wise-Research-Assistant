@@ -211,14 +211,28 @@ sequenceDiagram
 
 ## 🎯 Multi-Level Evaluation Framework
 
-### 🧪 Evaluation Pyramid
+### 🧪 Evaluation Framework
 
 ```mermaid
-pyramid
-    title Evaluation Levels
-    a : 🤖 Model-Level
-    b : 🎓 Agent-Level  
-    c : 👤 User Experience
+graph TD
+    A[🎯 Evaluation Framework] 
+    A --> B[🤖 Model-Level]
+    A --> C[🎓 Agent-Level]
+    A --> D[👤 User Experience]
+    
+    B --> B1[ROUGE/BLEU Metrics]
+    B --> B2[CNN/DailyMail Benchmark]
+    
+    C --> C1[Quiz Evaluation Pipeline]
+    C --> C2[Gemini Grader Assessment]
+    
+    D --> D1[RAG Citations & Evidence]
+    D --> D2[Learning Context Support]
+    
+    style A fill:#f3e5f5,stroke:#e91e63,stroke-width:3px
+    style B fill:#e8f5e8,stroke:#4caf50,stroke-width:2px
+    style C fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
+    style D fill:#fff3e0,stroke:#ff9800,stroke-width:2px
 ```
 
 #### 1️⃣ **🤖 Model-Level Evaluation**
