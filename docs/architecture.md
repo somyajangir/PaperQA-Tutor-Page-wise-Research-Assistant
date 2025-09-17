@@ -198,72 +198,45 @@ mindmap
         Global knowledge
 ```
 
-### 2️⃣ Global RAG Q&A Sequence
+## 💻 Technical Implementation Details
+
+### 🔄 System Interaction Patterns
 
 ```mermaid
 sequenceDiagram
-    participant U as 👤 User
-    participant UI as 🖥️ Streamlit UI
-    participant IDX as 🔍 RAGIndexer (FAISS)
-    participant LLM as 🧠 Gemini 2.5 Flash Lite
+    participant Student as Student
+    participant UI as UI Interface
+    participant AI as AI Engine
+    participant KB as Knowledge Base
+    participant Local as Local AI
 
-    U->>UI: ❓ Ask RAG question
-    UI->>IDX: 🔎 retrieve(question, k)
-    IDX-->>UI: 📄 top-k chunks (+page numbers)
-    UI->>LLM: 🧠 synthesize answer from chunks
-    LLM-->>UI: ✅ concise answer + citations
-    UI-->>U: 📋 Answer + evidence (snippets with page nos.)
+    Note over Student,Local: Learning Session Flow
     
-    Note over U,LLM: 🌐 Global document knowledge with citations
-```
-
-### 3️⃣ Page Tutor Learning Sequence
-
-```mermaid
-sequenceDiagram
-    participant U as 👤 User
-    participant UI as 🖥️ Streamlit UI
-    participant EXP as 📝 Explainer (Gemini)
-    participant SUM as 🤖 Summarizer (Gemma-3-270M)
-    participant PQA as ❓ PageQAAgent
-
-    U->>UI: 📚 Open Page Tutor
-    UI->>EXP: 📖 Explain page (with context)
-    EXP-->>UI: 📋 TL;DR + Breakdown + Key Terms
+    Student->>UI: Upload research paper
+    UI->>AI: Process PDF content
+    AI->>KB: Build searchable index
+    KB-->>UI: Ready for learning
     
-    U->>UI: 🔘 Click "Summarize (Gemma-3-270M)"
-    UI->>SUM: 🤖 summarize_page(text)
-    SUM-->>UI: 📝 local offline summary
+    Student->>UI: Explain this page
+    UI->>AI: Generate explanation
+    AI-->>Student: Concepts and Key terms
     
-    U->>UI: ❓ Ask page-scoped question
-    UI->>PQA: 🔍 retrieve + answer
-    PQA-->>UI: ✅ answer + forced citations
+    Student->>UI: Give me a summary
+    UI->>Local: Local summarization
+    Local-->>Student: Quick offline summary
     
-    Note over U,PQA: 📄 Page-specific learning with local AI
-```
-
-### 4️⃣ Quiz Generation & Evaluation Flow
-
-```mermaid
-flowchart TD
-    A[📚 Page Content] --> B[🧪 Quiz Generator<br/>Gemini API]
-    B --> C[📝 5 Questions Generated<br/>JSON Format]
-    C --> D[👤 User Attempts Quiz]
-    D --> E[📊 Answer Evaluator<br/>Gemini Grading]
-    E --> F{📈 Evaluation Result}
+    Student->>UI: Test my knowledge
+    UI->>AI: Generate quiz
+    AI-->>Student: 5 targeted questions
     
-    F -->|✅| G[Correct<br/>+ Positive Feedback]
-    F -->|⚠️| H[Partial<br/>+ Constructive Hints]
-    F -->|❌| I[Incorrect<br/>+ Learning Guidance]
+    Student->>UI: Submit answers
+    UI->>AI: Grade responses
+    AI-->>Student: Feedback and Score
     
-    G --> J[📋 Performance Summary]
-    H --> J
-    I --> J
-    
-    style A fill:#e8f5e8
-    style C fill:#fff3e0
-    style F fill:#f3e5f5
-    style J fill:#e1f5fe
+    Student->>UI: Search the whole paper
+    UI->>KB: Find relevant content
+    KB->>AI: Synthesize answer
+    AI-->>Student: Answer with Citations
 ```
 
 ---
