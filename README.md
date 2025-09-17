@@ -152,16 +152,3 @@ streamlit run ui/app.py
 
 ---
 
-<div align="center">
-
-## 👨‍💻 Author
-
-**Somya Jangir** • B23CI1036  
-*Civil & Infrastructure Engineering*  
-**Indian Institute of Technology, Jodhpur**
-
----
-
-*Built with ❤️ for enhanced research paper comprehension*
-
-</div>
