@@ -8,8 +8,7 @@
 
 ---
 
-**👨‍🎓 Author:** Somya Jangir (B23CI1036)  
-**🏛️ Department:** Civil and Infrastructure Engineering  
+**👨‍🎓 Author:** Somya Jangir
 **🏫 Institution:** IIT Jodhpur
 
 ---
