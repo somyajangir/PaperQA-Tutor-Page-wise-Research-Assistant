@@ -8,8 +8,8 @@
 
 ---
 
-**👨‍🔬 Research by:** Somya Jangir (B23CI1036)  
-**🏛️ Department:** Civil and Infrastructure Engineering  
+**👨‍🔬 Research by:** Somya Jangir
+ 
 **🏫 Institution:** IIT Jodhpur
 
 </div>
