@@ -1,4 +1,4 @@
-# 📚 PaperQA Section Tutor — IIT Jodhpur
+# 📚 PaperQA Section Tutor 
 
 <div align="center">
 
