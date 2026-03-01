@@ -387,8 +387,7 @@ graph TD
 
 ## 👨‍🔬 Research Team
 
-**Somya Jangir** • B23CI1036  
-*Civil & Infrastructure Engineering*  
+**Somya Jangir**  
 **Indian Institute of Technology, Jodhpur**
 
 ---
